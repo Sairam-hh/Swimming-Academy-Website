@@ -1,0 +1,3311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AQUAFLOW - Swimming Academy | Swim Better. Live Healthier.</title>
+    <meta
+      name="description"
+      content="AQUAFLOW Swimming Academy - certified coaches, heated pools and programs for every age."
+    />
+    <link rel="icon" href="assets/images/aquaflow-logo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <noscript
+      ><style>
+        /* ===== Page styles ===== */
+        .rv {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style></noscript
+    >
+    <style>
+      :root {
+        --wv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 46' preserveAspectRatio='none'%3E%3Cpath fill='%23EAF8FC' d='M0 46V22C240 0 480 0 720 22s480 22 720 0v24z'/%3E%3C/svg%3E");
+        --abyss: #012a4a;
+        --deep: #013a63;
+        --ocean: #01497c;
+        --blue: #0077b6;
+        --sea: #0096c7;
+        --aqua: #00b4d8;
+        --sky: #48cae4;
+        --foam: #90e0ef;
+        --mist: #caf0f8;
+        --pale: #eaf8fc;
+        --coral: #ff7f6b;
+        --sun: #ffb703;
+        --ink: #0b2b45;
+        --g: linear-gradient(135deg, var(--blue), var(--aqua));
+        --sh: 0 14px 36px rgba(1, 58, 99, 0.12);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 86px;
+      }
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      body {
+        font:
+          16px/1.7 Inter,
+          "Segoe UI",
+          system-ui,
+          sans-serif;
+        color: var(--ink);
+        background: var(--pale);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+      button {
+        cursor: pointer;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: Outfit, Inter, "Segoe UI", sans-serif;
+        line-height: 1.12;
+        color: var(--abyss);
+        font-weight: 700;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .w {
+        max-width: 1220px;
+        margin: auto;
+        padding: 0 22px;
+      }
+      .i {
+        width: 20px;
+        height: 20px;
+        flex: none;
+      }
+      .sec {
+        padding: 96px 0;
+        position: relative;
+      }
+      .wh {
+        background: #fff;
+      }
+      .dk {
+        background: linear-gradient(160deg, var(--abyss), var(--deep) 45%, var(--blue));
+        color: #d4efff;
+      }
+      .dk h2,
+      .dk h3,
+      .dk h4 {
+        color: #fff;
+      }
+      .dk:before,
+      .dk:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 46px;
+        background: var(--wv) center/100% 100% no-repeat;
+        pointer-events: none;
+      }
+      .dk:before {
+        top: -1px;
+        transform: scaleY(-1);
+      }
+      .dk:after {
+        bottom: -1px;
+      }
+      .eb {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--blue);
+        font-size: 0.78rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .eb:before {
+        content: "";
+        width: 28px;
+        height: 2px;
+        background: var(--aqua);
+      }
+      .dk .eb,
+      .cta .eb,
+      .pg .eb {
+        color: var(--sky);
+      }
+      .st {
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        margin-bottom: 14px;
+      }
+      .lead {
+        color: #4d6a80;
+        max-width: 640px;
+      }
+      .dk .lead {
+        color: #b8dcf2;
+      }
+      .hd2 {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 56px;
+      }
+      .hd2 .lead {
+        margin: 12px auto 0;
+      }
+      .btn {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        padding: 14px 28px;
+        border: 1px solid transparent;
+        background: linear-gradient(135deg, var(--aqua), var(--sea));
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        transition: 0.35s;
+        border-radius: 6px;
+      }
+      .btn:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -80%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+        transform: skewX(-20deg);
+        transition: 0.7s;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 30px rgba(0, 150, 199, 0.4);
+      }
+      .btn:hover:after {
+        left: 130%;
+      }
+      .btn.out {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(8px);
+      }
+      .btn.out:hover {
+        background: #fff;
+        color: var(--deep);
+      }
+      .btn.dkb {
+        background: var(--abyss);
+      }
+      .btn.sm {
+        padding: 10px 20px;
+      }
+      .btn.full {
+        width: 100%;
+      }
+      .btn .i {
+        width: 17px;
+        height: 17px;
+      }
+      .btn.ln {
+        background: transparent;
+        color: var(--blue);
+        border-color: var(--blue);
+      }
+      .btn.ln:hover {
+        background: var(--blue);
+        color: #fff;
+      }
+      .hd {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 100;
+        height: 76px;
+        background: linear-gradient(180deg, rgba(1, 42, 74, 0.88), rgba(1, 58, 99, 0.6));
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(144, 224, 239, 0.22);
+        transition: 0.3s;
+      }
+      .hi {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 14px;
+      }
+      .lg img {
+        height: 44px;
+        width: auto;
+        filter: drop-shadow(0 0 10px rgba(72, 202, 228, 0.6));
+        transition: 0.4s;
+      }
+      .lg:hover img {
+        transform: scale(1.05);
+      }
+      .nv {
+        display: flex;
+        gap: 4px;
+      }
+      .nv a {
+        position: relative;
+        padding: 8px 17px;
+        color: #eaf8fc;
+        font-size: 0.84rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .nv a:after {
+        content: "";
+        position: absolute;
+        left: 17px;
+        right: 17px;
+        bottom: 2px;
+        height: 2px;
+        background: var(--sky);
+        transform: scaleX(0);
+        transition: 0.35s;
+        transform-origin: left;
+      }
+      .nv a:hover,
+      .nv a.on {
+        color: var(--sky);
+      }
+      .nv a:hover:after,
+      .nv a.on:after {
+        transform: scaleX(1);
+      }
+      .dl {
+        justify-self: end;
+        background: var(--abyss);
+        border-color: rgba(144, 224, 239, 0.4);
+      }
+      .bg,
+      .mnl {
+        display: none;
+      }
+      .hero {
+        position: relative;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        padding: 130px 0 170px;
+        color: #fff;
+        overflow: hidden;
+        background: linear-gradient(105deg, var(--abyss) 0%, var(--ocean) 48%, var(--aqua) 110%);
+      }
+      .hs {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 54%;
+        object-fit: cover;
+        object-position: 40% 40%;
+        -webkit-mask-image: linear-gradient(90deg, transparent, #000 38%);
+        mask-image: linear-gradient(90deg, transparent, #000 38%);
+      }
+      .hero .w {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+      }
+      .hero h1 {
+        color: #fff;
+        font-size: clamp(2.7rem, 7.2vw, 5.4rem);
+        max-width: 720px;
+        text-shadow: 0 4px 26px rgba(1, 42, 74, 0.45);
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--sky);
+      }
+      .hero p {
+        max-width: 520px;
+        margin: 20px 0 34px;
+        font-size: 1.12rem;
+        color: #d8f1fb;
+      }
+      .acts {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .bub {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(202, 240, 248, 0.55);
+        background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), transparent 60%);
+        animation: rise 10s linear infinite;
+        pointer-events: none;
+      }
+      @keyframes rise {
+        from {
+          transform: translateY(60px);
+          opacity: 0;
+        }
+        20% {
+          opacity: 0.9;
+        }
+        to {
+          transform: translateY(-115vh);
+          opacity: 0;
+        }
+      }
+      .strip {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 34px;
+        z-index: 3;
+      }
+      .sg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+      .sg > div {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        padding: 18px 20px;
+        background: rgba(1, 42, 74, 0.7);
+        border: 1px solid rgba(144, 224, 239, 0.28);
+        backdrop-filter: blur(16px);
+        font-weight: 600;
+        font-size: 0.92rem;
+        transition: 0.4s;
+        border-radius: 6px;
+      }
+      .sg > div:hover {
+        transform: translateY(-7px);
+        border-color: var(--sky);
+        background: rgba(0, 119, 182, 0.55);
+      }
+      .sg .i {
+        width: 30px;
+        height: 30px;
+        color: var(--sky);
+      }
+      .pg {
+        position: relative;
+        padding: 160px 0 90px;
+        color: #fff;
+        overflow: hidden;
+        background:
+          var(--bg) center/cover,
+          var(--abyss);
+      }
+      .pg:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          100deg,
+          rgba(1, 42, 74, 0.96),
+          rgba(1, 73, 124, 0.78) 55%,
+          rgba(0, 150, 199, 0.45)
+        );
+      }
+      .pg .w {
+        position: relative;
+      }
+      .pg h1 {
+        color: #fff;
+        font-size: clamp(2.4rem, 6vw, 4.3rem);
+      }
+      .pg p {
+        max-width: 560px;
+        margin-top: 12px;
+        color: #d4efff;
+        font-size: 1.1rem;
+      }
+      .cr {
+        display: flex;
+        gap: 10px;
+        font-size: 0.8rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        color: #b8dcf2;
+      }
+      .cr a:hover {
+        color: var(--sky);
+      }
+      .cr b {
+        color: var(--sky);
+      }
+      .g2,
+      .g3,
+      .g4,
+      .g6 {
+        display: grid;
+        gap: 26px;
+      }
+      .g2 {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+      }
+      .g3 {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+      }
+      .g4 {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 255px), 1fr));
+      }
+      .g6 {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+      }
+      .sp {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        align-items: stretch;
+      }
+      .sp.r .im {
+        order: 2;
+      }
+      .im {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: var(--sh);
+        min-height: 420px;
+      }
+      .im img,
+      .im .bgi {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1.1s;
+      }
+      .im:hover img,
+      .im:hover .bgi {
+        transform: scale(1.08);
+      }
+      .im:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(1, 42, 74, 0.5), transparent 55%);
+        pointer-events: none;
+      }
+      .im .tag {
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        bottom: 20px;
+        padding: 14px 20px;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(14px);
+        color: #fff;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: 0.4s;
+      }
+      .im:hover .tag {
+        transform: translateY(-6px);
+        background: rgba(0, 119, 182, 0.7);
+      }
+      .tx {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid rgba(1, 73, 124, 0.1);
+        box-shadow: var(--sh);
+        border-radius: 8px;
+        padding: 26px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.45s;
+      }
+      .card:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 3px;
+        width: 100%;
+        background: var(--g);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.5s;
+      }
+      .card:hover {
+        transform: translateY(-9px);
+        box-shadow: 0 26px 50px rgba(1, 73, 124, 0.22);
+        border-color: rgba(0, 180, 216, 0.5);
+      }
+      .card:hover:before {
+        transform: scaleX(1);
+      }
+      .dk .card {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(144, 224, 239, 0.25);
+        backdrop-filter: blur(14px);
+        box-shadow: none;
+      }
+      .dk .card:hover {
+        background: rgba(0, 150, 199, 0.28);
+      }
+      .card h3 {
+        font-size: 1.28rem;
+        margin: 12px 0 6px;
+      }
+      .card p {
+        font-size: 0.94rem;
+        color: #4d6a80;
+      }
+      .dk .card p {
+        color: #bfe0f2;
+      }
+      .ib {
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        background: var(--g);
+        color: #fff;
+        border-radius: 8px;
+        transition: 0.5s;
+      }
+      .ib .i {
+        width: 24px;
+        height: 24px;
+      }
+      .card:hover .ib {
+        transform: rotate(-8deg) scale(1.12);
+        box-shadow: 0 10px 22px rgba(0, 150, 199, 0.45);
+      }
+      .ck li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 7px 0;
+        transition: 0.3s;
+      }
+      .ck li:hover {
+        transform: translateX(7px);
+        color: var(--blue);
+      }
+      .ck .i {
+        color: var(--aqua);
+        margin-top: 4px;
+        width: 18px;
+        height: 18px;
+      }
+      .stats {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .stt {
+        flex: 1;
+        min-width: 120px;
+        padding: 18px;
+        background: #fff;
+        border: 1px solid rgba(1, 73, 124, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        transition: 0.4s;
+        box-shadow: var(--sh);
+      }
+      .stt:hover {
+        transform: translateY(-6px);
+        background: var(--g);
+        color: #fff;
+      }
+      .stt b {
+        display: block;
+        font:
+          700 2.2rem Outfit,
+          sans-serif;
+        color: var(--blue);
+        line-height: 1.1;
+      }
+      .stt span {
+        font-size: 0.76rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #5a7890;
+      }
+      .stt:hover b,
+      .stt:hover span {
+        color: #fff;
+      }
+      .dk .stt {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(144, 224, 239, 0.28);
+        box-shadow: none;
+      }
+      .dk .stt b {
+        color: var(--sky);
+      }
+      .dk .stt span {
+        color: #b8dcf2;
+      }
+      .cc {
+        padding: 0;
+      }
+      .cc .ph {
+        height: 210px;
+        overflow: hidden;
+      }
+      .cc .ph img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1s;
+      }
+      .cc:hover .ph img {
+        transform: scale(1.1);
+      }
+      .cc .bd {
+        padding: 24px;
+      }
+      .lv {
+        display: inline-block;
+        padding: 3px 11px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        background: var(--mist);
+        color: var(--ocean);
+        border-radius: 4px;
+      }
+      .mt {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin: 10px 0 14px;
+        font-size: 0.82rem;
+        color: #4d6a80;
+      }
+      .mt span {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+      .mt .i {
+        width: 15px;
+        height: 15px;
+        color: var(--aqua);
+      }
+      .cc .ft2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        border-top: 1px solid rgba(1, 73, 124, 0.1);
+        padding-top: 14px;
+        margin-top: 14px;
+      }
+      .pr {
+        font:
+          700 1.4rem Outfit,
+          sans-serif;
+        color: var(--blue);
+      }
+      .pr small {
+        font: 400 0.75rem Inter;
+        color: #6a869c;
+      }
+      .tl {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        position: relative;
+        counter-reset: s;
+      }
+      .tl:before {
+        content: "";
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        top: 30px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--sky), var(--coral));
+      }
+      .tl > div {
+        text-align: center;
+        padding: 0 12px;
+        position: relative;
+      }
+      .tl > div:before {
+        counter-increment: s;
+        content: counter(s);
+        display: grid;
+        place-items: center;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 16px;
+        background: var(--abyss);
+        border: 2px solid var(--sky);
+        color: var(--sky);
+        font: 700 1.3rem Outfit;
+        transition: 0.45s;
+        border-radius: 8px;
+        position: relative;
+      }
+      .tl > div:hover:before {
+        background: var(--sky);
+        color: var(--abyss);
+        transform: translateY(-8px) rotate(-6deg);
+        box-shadow: 0 14px 28px rgba(72, 202, 228, 0.45);
+      }
+      .tl h3 {
+        font-size: 1.12rem;
+      }
+      .tl p {
+        font-size: 0.88rem;
+        color: #b8dcf2;
+      }
+      .tc {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 3/4;
+        border-radius: 8px;
+        box-shadow: var(--sh);
+        color: #fff;
+        background: var(--abyss);
+      }
+      .tc img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 20%;
+        transition: transform 1s;
+      }
+      .tc:hover img {
+        transform: scale(1.1);
+      }
+      .tc:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(1, 42, 74, 0.97) 8%,
+          rgba(1, 73, 124, 0.25) 55%,
+          transparent
+        );
+        transition: 0.5s;
+      }
+      .tc:hover:after {
+        background: linear-gradient(0deg, rgba(1, 42, 74, 0.98) 20%, rgba(0, 119, 182, 0.55));
+      }
+      .tc .tb {
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+      }
+      .tc h3 {
+        color: #fff;
+        font-size: 1.35rem;
+      }
+      .tc small {
+        color: var(--sky);
+        display: block;
+        font-weight: 600;
+      }
+      .tc .ex {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: 0.55s;
+        font-size: 0.86rem;
+        color: #d4efff;
+      }
+      .tc:hover .ex {
+        max-height: 150px;
+        opacity: 1;
+        margin-top: 8px;
+      }
+      .so {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .so a {
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: #fff;
+        transition: 0.35s;
+        border-radius: 6px;
+      }
+      .so a:hover {
+        background: var(--sky);
+        color: var(--abyss);
+        border-color: var(--sky);
+        transform: translateY(-4px);
+      }
+      .so svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+      .fc {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        border-radius: 8px;
+        color: #fff;
+        box-shadow: var(--sh);
+      }
+      .fc img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1s;
+      }
+      .fc:hover img {
+        transform: scale(1.12);
+      }
+      .fc:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(1, 42, 74, 0.92), rgba(1, 73, 124, 0.2));
+        z-index: 1;
+        transition: 0.5s;
+      }
+      .fc:hover:before {
+        background: linear-gradient(0deg, rgba(1, 42, 74, 0.95), rgba(0, 150, 199, 0.55));
+      }
+      .fc .fb2 {
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        right: 20px;
+        bottom: 18px;
+      }
+      .fc .i {
+        width: 34px;
+        height: 34px;
+        color: var(--sky);
+        margin-bottom: 6px;
+        transition: 0.5s;
+      }
+      .fc:hover .i {
+        transform: translateY(-6px) scale(1.15);
+      }
+      .fc h3 {
+        color: #fff;
+        font-size: 1.25rem;
+      }
+      .fc p {
+        font-size: 0.86rem;
+        color: #d4efff;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .fc:hover p {
+        max-height: 70px;
+        margin-top: 4px;
+      }
+      .chips {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 34px;
+      }
+      .chip {
+        padding: 10px 20px;
+        border: 1px solid rgba(1, 119, 182, 0.35);
+        background: #fff;
+        color: var(--ocean);
+        font-weight: 600;
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+      .chip:hover,
+      .chip.on {
+        background: var(--g);
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 22px rgba(0, 150, 199, 0.35);
+      }
+      .pl {
+        text-align: center;
+      }
+      .pl.ft3 {
+        background: linear-gradient(160deg, var(--deep), var(--blue));
+        color: #d4efff;
+        transform: scale(1.04);
+      }
+      .pl.ft3 h3,
+      .pl.ft3 .pp {
+        color: #fff;
+      }
+      .pl.ft3 p {
+        color: #d4efff;
+      }
+      .pp {
+        font: 700 2.6rem Outfit;
+        color: var(--blue);
+        margin: 8px 0;
+      }
+      .pp small {
+        font: 400 0.85rem Inter;
+      }
+      .pl .ck {
+        text-align: left;
+        margin: 16px 0 22px;
+      }
+      .pl .ck li {
+        border-bottom: 1px solid rgba(1, 73, 124, 0.08);
+      }
+      .pl.ft3 .ck li {
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+      .sl {
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+      }
+      .trk {
+        display: flex;
+        transition: transform 0.7s cubic-bezier(0.6, 0, 0.2, 1);
+      }
+      .it {
+        min-width: 100%;
+        padding: 38px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(144, 224, 239, 0.28);
+        backdrop-filter: blur(14px);
+        border-radius: 8px;
+      }
+      .av {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 12px;
+        border-radius: 50%;
+        background: var(--g);
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font: 700 1.5rem Outfit;
+        border: 3px solid rgba(255, 255, 255, 0.4);
+      }
+      .stars {
+        color: var(--sun);
+        letter-spacing: 3px;
+      }
+      .it q {
+        display: block;
+        margin: 12px 0 16px;
+        font-size: 1.15rem;
+        quotes: none;
+        color: #fff;
+      }
+      .it b {
+        color: #fff;
+      }
+      .it small {
+        display: block;
+        color: var(--sky);
+      }
+      .cn {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 22px;
+        align-items: center;
+      }
+      .cn button {
+        width: 44px;
+        height: 44px;
+        background: none;
+        border: 1px solid var(--sky);
+        color: var(--sky);
+        transition: 0.3s;
+        border-radius: 6px;
+      }
+      .cn button:hover {
+        background: var(--sky);
+        color: var(--abyss);
+        transform: translateY(-3px);
+      }
+      .dots {
+        display: flex;
+        gap: 6px;
+      }
+      .dots i {
+        width: 28px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .dots i:hover {
+        background: var(--foam);
+      }
+      .dots i.on {
+        background: var(--sky);
+      }
+      .cta {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        padding: 120px 0;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(1, 42, 74, 0.93), rgba(0, 119, 182, 0.85)),
+          radial-gradient(circle at 15% 20%, rgba(72, 202, 228, 0.28), transparent 40%),
+          radial-gradient(circle at 85% 80%, rgba(0, 180, 216, 0.3), transparent 45%);
+      }
+      .cta:before,
+      .cta:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(202, 240, 248, 0.35);
+        animation: rise 12s linear infinite;
+      }
+      .cta:before {
+        width: 90px;
+        height: 90px;
+        left: 10%;
+        bottom: -100px;
+      }
+      .cta:after {
+        width: 50px;
+        height: 50px;
+        right: 14%;
+        bottom: -60px;
+        animation-delay: 5s;
+      }
+      .cta h2 {
+        color: #fff;
+        font-size: clamp(2.2rem, 5vw, 3.8rem);
+        margin-bottom: 12px;
+      }
+      .cta p {
+        margin-bottom: 28px;
+        color: #d4efff;
+      }
+      .fqs {
+        max-width: 820px;
+        margin: auto;
+      }
+      .fq {
+        background: #fff;
+        border: 1px solid rgba(1, 73, 124, 0.12);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        transition: 0.35s;
+        overflow: hidden;
+      }
+      .fq:hover {
+        border-color: var(--aqua);
+        transform: translateX(6px);
+        box-shadow: var(--sh);
+      }
+      .fq button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        padding: 18px 22px;
+        background: none;
+        border: 0;
+        text-align: left;
+        font-weight: 600;
+        color: var(--abyss);
+      }
+      .pl {
+      }
+      .fq .pl {
+        color: var(--blue);
+        transition: 0.4s;
+      }
+      .fq.op .pl {
+        transform: rotate(135deg);
+      }
+      .fa {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+      }
+      .fa p {
+        padding: 0 22px 20px;
+        color: #4d6a80;
+      }
+      .tbl {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--sh);
+      }
+      .tbl th {
+        background: var(--abyss);
+        color: #fff;
+        text-align: left;
+        padding: 14px 16px;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .tbl td {
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(1, 73, 124, 0.08);
+        font-size: 0.92rem;
+      }
+      .tbl tr {
+        transition: 0.25s;
+      }
+      .tbl tbody tr:hover {
+        background: var(--mist);
+      }
+      .tw {
+        overflow-x: auto;
+        max-width: 100%;
+      }
+      .f {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+      }
+      .f label {
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--ocean);
+      }
+      .f input,
+      .f textarea,
+      .f select {
+        width: 100%;
+        padding: 13px 14px;
+        border: 1px solid rgba(1, 73, 124, 0.25);
+        background: #f4fbfe;
+        color: var(--ink);
+        transition: 0.3s;
+        border-radius: 6px;
+        outline: none;
+      }
+      .f input:hover,
+      .f textarea:hover,
+      .f select:hover {
+        border-color: var(--aqua);
+      }
+      .f input:focus,
+      .f textarea:focus,
+      .f select:focus {
+        border-color: var(--blue);
+        box-shadow: 0 0 0 4px rgba(0, 180, 216, 0.2);
+        background: #fff;
+      }
+      .f.bad input,
+      .f.bad textarea,
+      .f.bad select {
+        border-color: var(--coral);
+        background: #fff5f3;
+      }
+      .er {
+        color: #d6452f;
+        font-size: 0.8rem;
+        min-height: 1em;
+      }
+      .ci li {
+        display: flex;
+        gap: 11px;
+        align-items: flex-start;
+      }
+      .ci .i {
+        color: var(--sky);
+        margin-top: 4px;
+        width: 18px;
+        height: 18px;
+      }
+      .ft {
+        background: var(--abyss);
+        color: #9fc6dd;
+        padding: 80px 0 0;
+        font-size: 0.93rem;
+        position: relative;
+      }
+      .fg {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr 1fr 1.4fr;
+        gap: 42px;
+      }
+      .ft h4 {
+        color: var(--sky);
+        margin-bottom: 16px;
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .ft li {
+        margin: 9px 0;
+      }
+      .ft li a {
+        display: inline-block;
+        transition: 0.3s;
+      }
+      .ft li a:hover {
+        color: var(--sky);
+        transform: translateX(6px);
+      }
+      .ft .lg img {
+        height: 50px;
+        margin-bottom: 14px;
+      }
+      .fb {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 52px;
+        padding: 22px 0;
+        border-top: 1px solid rgba(72, 202, 228, 0.2);
+        font-size: 0.84rem;
+      }
+      .fb a:hover {
+        color: var(--sky);
+      }
+      .toasts {
+        position: fixed;
+        top: 90px;
+        right: 18px;
+        z-index: 999;
+        display: grid;
+        gap: 10px;
+        max-width: calc(100vw - 36px);
+      }
+      .toast {
+        background: var(--abyss);
+        color: #fff;
+        border-left: 4px solid var(--aqua);
+        padding: 16px 22px;
+        box-shadow: 0 18px 40px rgba(1, 42, 74, 0.35);
+        transform: translateX(125%);
+        transition: 0.45s;
+        border-radius: 6px;
+        font-size: 0.92rem;
+      }
+      .toast.err {
+        border-color: var(--coral);
+      }
+      .toast.show {
+        transform: none;
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(34px);
+        transition:
+          opacity 0.85s,
+          transform 0.85s;
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      .rv.d1 {
+        transition-delay: 0.1s;
+      }
+      .rv.d2 {
+        transition-delay: 0.2s;
+      }
+      .rv.d3 {
+        transition-delay: 0.3s;
+      }
+      .mq {
+        overflow: hidden;
+        background: var(--abyss);
+        padding: 16px 0;
+        white-space: nowrap;
+      }
+      .mq div {
+        display: inline-block;
+        animation: mq 28s linear infinite;
+      }
+      .mq span {
+        display: inline-block;
+        margin: 0 28px;
+        color: var(--foam);
+        font: 600 1rem Outfit;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        transition: 0.3s;
+      }
+      .mq span:hover {
+        color: #fff;
+      }
+      .mq span:before {
+        content: "\2022";
+        color: var(--aqua);
+        margin-right: 28px;
+      }
+      @keyframes mq {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .spb {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background: linear-gradient(90deg, var(--aqua), var(--sky), var(--coral));
+        z-index: 400;
+        transition: width 0.1s;
+      }
+      .btt {
+        position: fixed;
+        right: 20px;
+        bottom: 22px;
+        width: 48px;
+        height: 48px;
+        border: 0;
+        border-radius: 8px;
+        background: var(--g);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        z-index: 90;
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none;
+        transition: 0.4s;
+        box-shadow: 0 14px 30px rgba(0, 150, 199, 0.45);
+      }
+      .btt.on {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+      .btt:hover {
+        transform: translateY(-5px) scale(1.08);
+      }
+      .btt .i {
+        transform: rotate(-90deg);
+      }
+      .hd.sc {
+        height: 64px;
+        background: rgba(1, 42, 74, 0.94);
+        box-shadow: 0 12px 30px rgba(1, 42, 74, 0.3);
+      }
+      .hd.sc .lg img {
+        height: 38px;
+      }
+      .st {
+        background: linear-gradient(90deg, var(--abyss), var(--blue) 70%, var(--aqua));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .dk .st,
+      .cta h2 {
+        background: linear-gradient(90deg, #fff, var(--foam) 70%, var(--sky));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .sec:not(.dk) {
+        background-image:
+          radial-gradient(circle at 92% 6%, rgba(0, 180, 216, 0.09), transparent 38%),
+          radial-gradient(circle at 4% 96%, rgba(0, 119, 182, 0.07), transparent 36%);
+      }
+      .card,
+      .tc,
+      .fc {
+        --rx: 0deg;
+        --ry: 0deg;
+        transform-style: preserve-3d;
+      }
+      .card:hover {
+        transform: perspective(900px) translateY(-9px) rotateX(var(--rx)) rotateY(var(--ry));
+      }
+      .tc:hover,
+      .fc:hover {
+        transform: perspective(900px) translateY(-8px) rotateX(var(--rx)) rotateY(var(--ry));
+        box-shadow: 0 28px 54px rgba(1, 73, 124, 0.3);
+      }
+      .tc,
+      .fc {
+        transition:
+          transform 0.45s,
+          box-shadow 0.45s;
+      }
+      .card:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          320px circle at var(--mx, 50%) var(--my, 0%),
+          rgba(0, 180, 216, 0.2),
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.4s;
+        pointer-events: none;
+      }
+      .card:hover:after {
+        opacity: 1;
+      }
+      .mq:hover div {
+        animation-play-state: paused;
+      }
+      .cr a {
+        transition: 0.3s;
+      }
+      .stt,
+      .sg > div,
+      .chip,
+      .pf {
+        transition: 0.4s;
+      }
+      .ci li {
+        padding: 9px 12px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        transition: 0.4s;
+        cursor: default;
+      }
+      .ci li .i {
+        padding: 6px;
+        width: 32px;
+        height: 32px;
+        margin-top: 0;
+        border-radius: 8px;
+        background: rgba(72, 202, 228, 0.14);
+        transition: 0.45s;
+      }
+      .ci li:hover {
+        background: rgba(0, 150, 199, 0.22);
+        border-color: rgba(72, 202, 228, 0.4);
+        transform: translateX(8px);
+        color: #fff;
+      }
+      .ci li:hover .i {
+        background: var(--aqua);
+        color: var(--abyss);
+        transform: rotate(-10deg) scale(1.15);
+      }
+      .ci li a,
+      .ci li span {
+        transition: 0.3s;
+      }
+      .ci li:hover a,
+      .ci li:hover span {
+        color: #fff;
+      }
+      .so a {
+        position: relative;
+        overflow: hidden;
+      }
+      .ft .lg:hover img {
+        transform: scale(1.06);
+      }
+      .cx {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: stretch;
+      }
+      .cl {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .ibx {
+        display: grid;
+        gap: 12px;
+      }
+      .ir {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        padding: 15px 18px;
+        background: var(--pale);
+        border: 1px solid rgba(1, 73, 124, 0.1);
+        border-radius: 8px;
+        transition: 0.4s;
+      }
+      .ir .ib {
+        flex: none;
+        width: 46px;
+        height: 46px;
+      }
+      .ir small {
+        display: block;
+        color: #5a7890;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .ir b {
+        color: var(--abyss);
+        font-weight: 600;
+      }
+      .ir:hover {
+        transform: translateX(10px);
+        border-color: var(--aqua);
+        background: #fff;
+        box-shadow: var(--sh);
+      }
+      .ir:hover .ib {
+        transform: rotate(-8deg) scale(1.1);
+      }
+      .cimg {
+        flex: 1;
+        min-height: 200px;
+      }
+      @media (max-width: 980px) {
+        .cx {
+          grid-template-columns: 1fr;
+        }
+        .btt {
+          right: 14px;
+          bottom: 14px;
+        }
+        .hd.sc {
+          height: 62px;
+        }
+      }
+      @media (max-width: 980px) {
+        .hi {
+          grid-template-columns: 1fr auto;
+        }
+        .dl {
+          display: none;
+        }
+        .bg {
+          display: block;
+          position: relative;
+          z-index: 3;
+          width: 46px;
+          height: 46px;
+          background: none;
+          border: 0;
+        }
+        .bg span {
+          position: absolute;
+          left: 11px;
+          right: 11px;
+          height: 2px;
+          background: #fff;
+          transition: 0.35s;
+        }
+        .bg span:nth-child(1) {
+          top: 15px;
+        }
+        .bg span:nth-child(2) {
+          top: 22px;
+        }
+        .bg span:nth-child(3) {
+          top: 29px;
+        }
+        .mo .bg span:nth-child(1) {
+          top: 22px;
+          transform: rotate(45deg);
+        }
+        .mo .bg span:nth-child(2) {
+          opacity: 0;
+        }
+        .mo .bg span:nth-child(3) {
+          top: 22px;
+          transform: rotate(-45deg);
+        }
+        .nv {
+          position: fixed;
+          top: 76px;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          gap: 0;
+          padding: 10px 22px 26px;
+          background: var(--abyss);
+          border-bottom: 1px solid rgba(72, 202, 228, 0.3);
+          transform: translateY(-130%);
+          transition: 0.45s;
+          z-index: -1;
+          max-height: calc(100svh - 76px);
+          overflow: auto;
+        }
+        .mo .nv {
+          transform: none;
+        }
+        .nv a {
+          padding: 16px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .nv a:after {
+          display: none;
+        }
+        .mnl {
+          display: inline-flex;
+          margin-top: 18px;
+          border-bottom: 0 !important;
+        }
+        .sp {
+          grid-template-columns: 1fr;
+        }
+        .sp.r .im {
+          order: 0;
+        }
+        .im {
+          min-height: 300px;
+        }
+        .sg {
+          grid-template-columns: 1fr 1fr;
+        }
+        .strip {
+          position: static;
+          margin-top: 38px;
+        }
+        .hero {
+          padding: 110px 0 60px;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: flex-start;
+        }
+        .strip {
+          width: 100%;
+        }
+        .hs {
+          width: 100%;
+          opacity: 0.3;
+          -webkit-mask-image: none;
+          mask-image: none;
+        }
+        .tl {
+          grid-template-columns: 1fr;
+          gap: 26px;
+        }
+        .tl:before {
+          display: none;
+        }
+        .fg {
+          grid-template-columns: 1fr 1fr;
+        }
+        .pl.ft3 {
+          transform: none;
+        }
+      }
+      @media (max-width: 560px) {
+        .sec {
+          padding: 68px 0;
+        }
+        .sg,
+        .fg {
+          grid-template-columns: 1fr;
+        }
+        .btn {
+          width: 100%;
+        }
+        .acts .btn {
+          width: 100%;
+        }
+        .pg {
+          padding: 130px 0 64px;
+        }
+        .it {
+          padding: 26px 18px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition: none !important;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol
+          id="i-award"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM8.2 13.9L7 23l5-3 5 3-1.2-9.1" />
+        </symbol>
+        <symbol
+          id="i-shield"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </symbol>
+        <symbol
+          id="i-users"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"
+          />
+        </symbol>
+        <symbol
+          id="i-heart"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"
+          />
+        </symbol>
+        <symbol
+          id="i-clock"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 6v6l4 2" />
+        </symbol>
+        <symbol
+          id="i-user"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+        </symbol>
+        <symbol
+          id="i-calendar"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 4h18v18H3zM16 2v4M8 2v4M3 10h18" />
+        </symbol>
+        <symbol
+          id="i-star"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z" />
+        </symbol>
+        <symbol
+          id="i-check"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20 6L9 17l-5-5" />
+        </symbol>
+        <symbol
+          id="i-phone"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"
+          />
+        </symbol>
+        <symbol
+          id="i-mail"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 5h18v14H3zM3 7l9 6 9-6" />
+        </symbol>
+        <symbol
+          id="i-pin"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0zM12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+          />
+        </symbol>
+        <symbol
+          id="i-drop"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 2.7s7 6.6 7 11.3a7 7 0 0 1-14 0C5 9.3 12 2.7 12 2.7z" />
+        </symbol>
+        <symbol
+          id="i-wave"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M2 12c2.5 0 2.5-3 5-3s2.5 3 5 3 2.5-3 5-3 2.5 3 5 3M2 18c2.5 0 2.5-3 5-3s2.5 3 5 3 2.5-3 5-3 2.5 3 5 3M2 6c2.5 0 2.5-3 5-3s2.5 3 5 3 2.5-3 5-3 2.5 3 5 3"
+          />
+        </symbol>
+        <symbol
+          id="i-target"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zM12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+          />
+        </symbol>
+        <symbol
+          id="i-bolt"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M13 2L3 14h9l-1 8 10-12h-9z" />
+        </symbol>
+        <symbol
+          id="i-eye"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+          />
+        </symbol>
+        <symbol
+          id="i-book"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5zM20 17v5H6.5A2.5 2.5 0 0 1 4 19.5"
+          />
+        </symbol>
+        <symbol
+          id="i-chart"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 20V10M12 20V4M6 20v-6" />
+        </symbol>
+        <symbol
+          id="i-cash"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+        </symbol>
+        <symbol
+          id="i-bell"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0" />
+        </symbol>
+        <symbol
+          id="i-home"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM9 22V12h6v10" />
+        </symbol>
+        <symbol
+          id="i-sliders"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6" />
+        </symbol>
+        <symbol
+          id="i-logout"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+        </symbol>
+        <symbol
+          id="i-grid"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
+        </symbol>
+        <symbol
+          id="i-play"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 3l14 9-14 9z" />
+        </symbol>
+        <symbol
+          id="i-cap"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 3 9 3 12 0v-5" />
+        </symbol>
+        <symbol
+          id="i-lock"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4" />
+        </symbol>
+        <symbol
+          id="i-plus"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 5v14M5 12h14" />
+        </symbol>
+        <symbol
+          id="i-edit"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" />
+        </symbol>
+        <symbol
+          id="i-trash"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6" />
+        </symbol>
+        <symbol
+          id="i-arrow"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </symbol>
+        <symbol
+          id="i-menu"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </symbol>
+        <symbol
+          id="i-x"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 6L6 18M6 6l12 12" />
+        </symbol>
+      </defs>
+    </svg>
+    <!-- ===== Site header & navigation ===== -->
+    <header class="hd" id="hd">
+      <div class="w hi">
+        <a class="lg" href="index.html" aria-label="AQUAFLOW home"
+          ><img src="assets/images/aquaflow-logo.webp" alt="AQUAFLOW logo" width="900" height="366"
+        /></a>
+        <nav class="nv" id="nv" aria-label="Main navigation">
+          <a href="index.html" class="on">Home</a><a href="about.html">About</a
+          ><a href="courses.html">Courses</a><a href="trainers.html">Trainers</a
+          ><a href="contact.html">Contact</a><a class="btn sm mnl" href="login.html">Login</a>
+        </nav>
+        <a class="btn sm dl" href="login.html"
+          ><svg class="i" aria-hidden="true"><use href="#i-user" /></svg>Login</a
+        >
+        <button class="bg" id="bg" aria-label="Open menu" aria-expanded="false" aria-controls="nv">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- ===== Section: Hero ===== -->
+      <section class="hero">
+        <img
+          class="hs"
+          src="assets/images/hero-swimmer-underwater.webp"
+          alt="Swimmer gliding underwater"
+          width="750"
+          height="664"
+          fetchpriority="high"
+        />
+        <i class="bub" style="width: 60px; height: 60px; left: 8%; bottom: 0"></i
+        ><i
+          class="bub"
+          style="width: 28px; height: 28px; left: 44%; bottom: 0; animation-delay: 3s"
+        ></i
+        ><i
+          class="bub"
+          style="width: 90px; height: 90px; right: 10%; bottom: 0; animation-delay: 5s"
+        ></i>
+        <div class="w">
+          <span class="eb" style="color: var(--sky)">Aquaflow Swimming Academy</span>
+          <h1>Swim Better.<br /><em>Live Healthier.</em></h1>
+          <p>Join Aquaflow Swimming Academy &ndash; Where Passion Meets Performance!</p>
+          <div class="acts">
+            <a class="btn" href="404.html"
+              >Explore Courses <svg class="i" aria-hidden="true"><use href="#i-arrow" /></svg></a
+            ><a class="btn out" href="404.html"
+              ><svg class="i" aria-hidden="true"><use href="#i-play" /></svg>Watch Video</a
+            >
+          </div>
+        </div>
+        <div class="strip">
+          <div class="w sg">
+            <div>
+              <svg class="i" aria-hidden="true"><use href="#i-award" /></svg>Expert Trainers &amp;
+              Coaches
+            </div>
+            <div>
+              <svg class="i" aria-hidden="true"><use href="#i-wave" /></svg>World-Class Facilities
+            </div>
+            <div>
+              <svg class="i" aria-hidden="true"><use href="#i-heart" /></svg>Improve Your Health
+            </div>
+            <div>
+              <svg class="i" aria-hidden="true"><use href="#i-users" /></svg>All Age Groups
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="mq" aria-hidden="true">
+        <div>
+          <span>Certified Coaches</span><span>Heated Pools</span><span>Small Batches</span
+          ><span>All Ages</span><span>Safety First</span><span>Competition Training</span
+          ><span>Water Confidence</span><span>Fitness Swimming</span><span>Certified Coaches</span
+          ><span>Heated Pools</span><span>Small Batches</span><span>All Ages</span
+          ><span>Safety First</span><span>Competition Training</span><span>Water Confidence</span
+          ><span>Fitness Swimming</span>
+        </div>
+      </div>
+      <!-- ===== Section: About Our Academy ===== -->
+      <section class="sec" id="about">
+        <div class="w sp">
+          <div class="im rv">
+            <img
+              src="assets/images/academy-kid-swimmer-portrait.webp"
+              alt="Smiling young swimmer resting at the pool edge"
+              width="372"
+              height="334"
+              loading="lazy"
+            />
+            <div class="tag">Trusted by 5,000+ swimmers</div>
+          </div>
+          <div class="tx rv">
+            <span class="eb">About Our Academy</span>
+            <h2 class="st">Where every stroke builds confidence.</h2>
+            <p class="lead">
+              AQUAFLOW began with a simple mission &ndash; make swimming accessible, enjoyable and
+              beneficial for everyone. Today our certified coaches guide kids, adults and athletes
+              through structured programs in a safe, modern aquatic centre.
+            </p>
+            <ul class="ck">
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Small batches with a
+                maximum of 8 swimmers per coach
+              </li>
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Skill assessment and
+                a written plan for every student
+              </li>
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Lifeguards on deck
+                during every single session
+              </li>
+            </ul>
+            <div class="g2" style="gap: 14px; width: 100%">
+              <div class="card">
+                <div class="ib">
+                  <svg class="i" aria-hidden="true"><use href="#i-target" /></svg>
+                </div>
+                <h3>Our Mission</h3>
+                <p>Make swimming safe, joyful and accessible to all.</p>
+              </div>
+              <div class="card">
+                <div class="ib">
+                  <svg class="i" aria-hidden="true"><use href="#i-eye" /></svg>
+                </div>
+                <h3>Our Vision</h3>
+                <p>Become the most trusted swimming academy in the region.</p>
+              </div>
+            </div>
+            <div class="stats">
+              <div class="stt"><b data-to="12" data-s="+">0</b><span>Years</span></div>
+              <div class="stt"><b data-to="5000" data-s="+">0</b><span>Students</span></div>
+              <div class="stt"><b data-to="98" data-s="%">0</b><span>Success rate</span></div>
+            </div>
+            <a class="btn dkb" href="404.html"
+              >Know More About Us <svg class="i" aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Why Choose AQUAFLOW? ===== -->
+      <section class="sec dk">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Why Choose AQUAFLOW?</span>
+            <h2 class="st">Built around your progress</h2>
+            <p class="lead">
+              Six reasons thousands of families trust us with their swimming journey.
+            </p>
+          </div>
+          <div class="g3">
+            <div class="card rv d1">
+              <div class="ib">
+                <svg class="i" aria-hidden="true"><use href="#i-award" /></svg>
+              </div>
+              <h3>Certified Professional Coaches</h3>
+              <p>Internationally certified coaches and lifeguards lead every batch.</p>
+            </div>
+            <div class="card rv d2">
+              <div class="ib">
+                <svg class="i" aria-hidden="true"><use href="#i-wave" /></svg>
+              </div>
+              <h3>Modern Swimming Facilities</h3>
+              <p>Heated indoor and outdoor pools with crystal-clear filtration.</p>
+            </div>
+            <div class="card rv d3">
+              <div class="ib">
+                <svg class="i" aria-hidden="true"><use href="#i-heart" /></svg>
+              </div>
+              <h3>Beginner-Friendly Training</h3>
+              <p>Gentle, step-by-step programs that turn fear into confidence.</p>
+            </div>
+            <div class="card rv d1">
+              <div class="ib">
+                <svg class="i" aria-hidden="true"><use href="#i-target" /></svg>
+              </div>
+              <h3>Personal Training Programs</h3>
+              <p>Plans tailored to your goals, pace, age and schedule.</p>
+            </div>
+            <div class="card rv d2">
+              <div class="ib">
+                <svg class="i" aria-hidden="true"><use href="#i-shield" /></svg>
+              </div>
+              <h3>Safe Swimming Environment</h3>
+              <p>Trained lifeguards, safety gear and strict hygiene standards.</p>
+            </div>
+            <div class="card rv d3">
+              <div class="ib">
+                <svg class="i" aria-hidden="true"><use href="#i-clock" /></svg>
+              </div>
+              <h3>Flexible Training Schedules</h3>
+              <p>Early morning, evening and weekend batches to fit your life.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Swimming Courses ===== -->
+      <section class="sec" id="courses">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Swimming Courses</span>
+            <h2 class="st">A program for every swimmer</h2>
+            <p class="lead">
+              From the first float to race day, pick the course that matches your level.
+            </p>
+          </div>
+          <div class="g3">
+            <article class="card cc rv" data-k="beginner">
+              <div class="ph">
+                <img
+                  src="assets/images/ci-beginner.webp"
+                  alt="Beginner Swimming"
+                  loading="lazy"
+                  width="400"
+                  height="260"
+                />
+              </div>
+              <div class="bd">
+                <span class="lv">Beginner</span>
+                <h3>Beginner Swimming</h3>
+                <p>Water confidence, floating, breathing and basic freestyle for first-timers.</p>
+                <div class="mt">
+                  <span
+                    ><svg class="i" aria-hidden="true"><use href="#i-clock" /></svg>8 weeks</span
+                  ><span
+                    ><svg class="i" aria-hidden="true"><use href="#i-calendar" /></svg>3 sessions /
+                    week</span
+                  >
+                </div>
+                <div class="ft2">
+                  <div class="pr"><small>From </small>&#8377;4,500</div>
+                  <a class="btn sm" href="404.html">Explore Course</a>
+                </div>
+              </div>
+            </article>
+            <article class="card cc rv" data-k="intermediate">
+              <div class="ph">
+                <img
+                  src="assets/images/ci-intermediate.webp"
+                  alt="Intermediate Swimming"
+                  loading="lazy"
+                  width="400"
+                  height="260"
+                />
+              </div>
+              <div class="bd">
+                <span class="lv">Intermediate</span>
+                <h3>Intermediate Swimming</h3>
+                <p>Refine freestyle and backstroke, learn breaststroke and lap endurance.</p>
+                <div class="mt">
+                  <span
+                    ><svg class="i" aria-hidden="true"><use href="#i-clock" /></svg>10 weeks</span
+                  ><span
+                    ><svg class="i" aria-hidden="true"><use href="#i-calendar" /></svg>4 sessions /
+                    week</span
+                  >
+                </div>
+                <div class="ft2">
+                  <div class="pr"><small>From </small>&#8377;6,000</div>
+                  <a class="btn sm" href="404.html">Explore Course</a>
+                </div>
+              </div>
+            </article>
+            <article class="card cc rv" data-k="advanced">
+              <div class="ph">
+                <img
+                  src="assets/images/ci-advanced.webp"
+                  alt="Advanced Swimming"
+                  loading="lazy"
+                  width="400"
+                  height="260"
+                />
+              </div>
+              <div class="bd">
+                <span class="lv">Advanced</span>
+                <h3>Advanced Swimming</h3>
+                <p>Butterfly, flip turns, pacing and stroke efficiency for strong swimmers.</p>
+                <div class="mt">
+                  <span
+                    ><svg class="i" aria-hidden="true"><use href="#i-clock" /></svg>12 weeks</span
+                  ><span
+                    ><svg class="i" aria-hidden="true"><use href="#i-calendar" /></svg>5 sessions /
+                    week</span
+                  >
+                </div>
+                <div class="ft2">
+                  <div class="pr"><small>From </small>&#8377;8,000</div>
+                  <a class="btn sm" href="404.html">Explore Course</a>
+                </div>
+              </div>
+            </article>
+            <article class="card cc rv" data-k="kids">
+              <div class="ph">
+                <img
+                  src="assets/images/ci-kids.webp"
+                  alt="Kids Swimming"
+                  loading="lazy"
+                  width="400"
+                  height="260"
+                />
+              </div>
+              <div class="bd">
+                <span class="lv">Kids 4-12</span>
+                <h3>Kids Swimming</h3>
+                <p>Game-based lessons in a shallow, lifeguarded pool that build safety and joy.</p>
+                <div class="mt">
+                  <span
+                    ><svg class="i" aria-hidden="true"><use href="#i-clock" /></svg>8 weeks</span
+                  ><span
+                    ><svg class="i" aria-hidden="true"><use href="#i-calendar" /></svg>3 sessions /
+                    week</span
+                  >
+                </div>
+                <div class="ft2">
+                  <div class="pr"><small>From </small>&#8377;4,000</div>
+                  <a class="btn sm" href="404.html">Explore Course</a>
+                </div>
+              </div>
+            </article>
+            <article class="card cc rv" data-k="competitive">
+              <div class="ph">
+                <img
+                  src="assets/images/ci-competitive.webp"
+                  alt="Competitive Swimming"
+                  loading="lazy"
+                  width="400"
+                  height="260"
+                />
+              </div>
+              <div class="bd">
+                <span class="lv">Competitive</span>
+                <h3>Competitive Swimming</h3>
+                <p>Race starts, speed work, dry-land strength and meet preparation.</p>
+                <div class="mt">
+                  <span
+                    ><svg class="i" aria-hidden="true"><use href="#i-clock" /></svg>6 months</span
+                  ><span
+                    ><svg class="i" aria-hidden="true"><use href="#i-calendar" /></svg>6 sessions /
+                    week</span
+                  >
+                </div>
+                <div class="ft2">
+                  <div class="pr"><small>From </small>&#8377;12,000</div>
+                  <a class="btn sm" href="404.html">Explore Course</a>
+                </div>
+              </div>
+            </article>
+            <article class="card cc rv" data-k="private">
+              <div class="ph">
+                <img
+                  src="assets/images/ci-private.webp"
+                  alt="Private Swimming Lessons"
+                  loading="lazy"
+                  width="400"
+                  height="260"
+                />
+              </div>
+              <div class="bd">
+                <span class="lv">All levels</span>
+                <h3>Private Swimming Lessons</h3>
+                <p>Personal coaching built around your goals, schedule and comfort.</p>
+                <div class="mt">
+                  <span
+                    ><svg class="i" aria-hidden="true"><use href="#i-clock" /></svg>Flexible</span
+                  ><span
+                    ><svg class="i" aria-hidden="true"><use href="#i-calendar" /></svg>1-to-1
+                    sessions</span
+                  >
+                </div>
+                <div class="ft2">
+                  <div class="pr"><small>From </small>&#8377;1,200 </div>
+                  <a class="btn sm" href="404.html">Explore Course</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div style="text-align: center; margin-top: 44px">
+            <a class="btn" href="404.html"
+              >View All Courses <svg class="i" aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Our Training Process ===== -->
+      <section class="sec dk">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Our Training Process</span>
+            <h2 class="st">From first splash to personal best</h2>
+            <p class="lead">A clear five-step path so you always know what comes next.</p>
+          </div>
+          <div class="tl">
+            <div class="rv d1">
+              <h3>Registration</h3>
+              <p>Choose a course and reserve your batch online.</p>
+            </div>
+            <div class="rv d2">
+              <h3>Skill Assessment</h3>
+              <p>A coach evaluates comfort and technique in the water.</p>
+            </div>
+            <div class="rv d3">
+              <h3>Training Plan</h3>
+              <p>You receive a personal plan with clear milestones.</p>
+            </div>
+            <div class="rv d2">
+              <h3>Swimming Practice</h3>
+              <p>Guided sessions that build skill, stamina and confidence.</p>
+            </div>
+            <div class="rv d1">
+              <h3>Performance Evaluation</h3>
+              <p>Regular reviews and certificates mark your progress.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Meet Our Trainers ===== -->
+      <section class="sec">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Meet Our Trainers</span>
+            <h2 class="st">Coaches who care about your stroke</h2>
+            <p class="lead">Experienced, certified and endlessly patient.</p>
+          </div>
+          <div class="g4">
+            <article class="tc rv">
+              <img
+                src="assets/images/coach-david-kumar.webp"
+                alt="David Kumar, Head Coach"
+                loading="lazy"
+                width="330"
+                height="270"
+              />
+              <div class="tb">
+                <h3>David Kumar</h3>
+                <small>Head Coach &middot; 10+ years</small>
+                <div class="ex">
+                  <p>
+                    Specialization: Competitive stroke technique<br />Certified: FINA Level 3 Coach
+                  </p>
+                </div>
+                <div class="so" data-so></div>
+              </div>
+            </article>
+            <article class="tc rv">
+              <img
+                src="assets/images/coach-priya-sharma.webp"
+                alt="Priya Sharma, Swimming Coach"
+                loading="lazy"
+                width="330"
+                height="270"
+              />
+              <div class="tb">
+                <h3>Priya Sharma</h3>
+                <small>Swimming Coach &middot; 8+ years</small>
+                <div class="ex">
+                  <p>
+                    Specialization: Beginner and adult programs<br />Certified: Swim Australia
+                    Certified
+                  </p>
+                </div>
+                <div class="so" data-so></div>
+              </div>
+            </article>
+            <article class="tc rv">
+              <img
+                src="assets/images/coach-rahul-verma.webp"
+                alt="Rahul Verma, Fitness Trainer"
+                loading="lazy"
+                width="330"
+                height="270"
+              />
+              <div class="tb">
+                <h3>Rahul Verma</h3>
+                <small>Fitness Trainer &middot; 7+ years</small>
+                <div class="ex">
+                  <p>
+                    Specialization: Endurance and dry-land strength<br />Certified: ACE Fitness
+                    Specialist
+                  </p>
+                </div>
+                <div class="so" data-so></div>
+              </div>
+            </article>
+            <article class="tc rv">
+              <img
+                src="assets/images/coach-sneha-reddy.webp"
+                alt="Sneha Reddy, Kids Coach"
+                loading="lazy"
+                width="330"
+                height="270"
+              />
+              <div class="tb">
+                <h3>Sneha Reddy</h3>
+                <small>Kids Coach &middot; 6+ years</small>
+                <div class="ex">
+                  <p>Specialization: Kids and water safety<br />Certified: Red Cross Lifeguard</p>
+                </div>
+                <div class="so" data-so></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Academy Facilities ===== -->
+      <section class="sec wh">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Academy Facilities</span>
+            <h2 class="st">Train in world-class spaces</h2>
+            <p class="lead">
+              Every corner of AQUAFLOW is designed for comfort, safety and performance.
+            </p>
+          </div>
+          <div class="g3">
+            <div class="fc rv">
+              <img
+                src="assets/images/fac-indoor.webp"
+                alt="Indoor Swimming Pool"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="fb2">
+                <svg class="i" aria-hidden="true"><use href="#i-wave" /></svg>
+                <h3>Indoor Swimming Pool</h3>
+                <p>Heated 25 m, 8-lane pool for all-weather training.</p>
+              </div>
+            </div>
+            <div class="fc rv">
+              <img
+                src="assets/images/fac-outdoor.webp"
+                alt="Outdoor Swimming Pool"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="fb2">
+                <svg class="i" aria-hidden="true"><use href="#i-drop" /></svg>
+                <h3>Outdoor Swimming Pool</h3>
+                <p>Open-air lap pool with sunrise and sunset batches.</p>
+              </div>
+            </div>
+            <div class="fc rv">
+              <img
+                src="assets/images/fac-kids.webp"
+                alt="Kids Swimming Area"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="fb2">
+                <svg class="i" aria-hidden="true"><use href="#i-heart" /></svg>
+                <h3>Kids Swimming Area</h3>
+                <p>Shallow, lifeguarded pool with play-based learning.</p>
+              </div>
+            </div>
+            <div class="fc rv">
+              <img
+                src="assets/images/fac-changing.webp"
+                alt="Changing Rooms"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="fb2">
+                <svg class="i" aria-hidden="true"><use href="#i-users" /></svg>
+                <h3>Changing Rooms</h3>
+                <p>Clean lockers, hot showers and family cubicles.</p>
+              </div>
+            </div>
+            <div class="fc rv">
+              <img
+                src="assets/images/fac-safety.webp"
+                alt="Safety Equipment"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="fb2">
+                <svg class="i" aria-hidden="true"><use href="#i-shield" /></svg>
+                <h3>Safety Equipment</h3>
+                <p>Rescue tubes, first-aid and trained lifeguards on deck.</p>
+              </div>
+            </div>
+            <div class="fc rv">
+              <img
+                src="assets/images/fac-equipment.webp"
+                alt="Training Equipment"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+              <div class="fb2">
+                <svg class="i" aria-hidden="true"><use href="#i-bolt" /></svg>
+                <h3>Training Equipment</h3>
+                <p>Kickboards, pull buoys, paddles and a dry-land gym.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Swimming Benefits ===== -->
+      <section class="sec">
+        <div class="w sp r">
+          <div class="im rv">
+            <img
+              src="assets/images/swimmer-underwater-portrait.webp"
+              alt="Swimmer reaching forward underwater"
+              width="500"
+              height="950"
+              loading="lazy"
+              style="object-position: 50% 25%"
+            />
+            <div class="tag">Low-impact. Full-body. Lifelong.</div>
+          </div>
+          <div class="tx rv">
+            <span class="eb">Swimming Benefits</span>
+            <h2 class="st">One sport. Total-body wellness.</h2>
+            <p class="lead">
+              Swimming strengthens every major muscle group, protects your joints and calms the mind
+              &ndash; which is why doctors recommend it at every age.
+            </p>
+            <div class="g2" style="gap: 14px; width: 100%">
+              <div class="card rv">
+                <div class="ib">
+                  <svg class="i" aria-hidden="true"><use href="#i-bolt" /></svg>
+                </div>
+                <h3>Physical Fitness</h3>
+                <p>Builds strength, tone and coordination.</p>
+              </div>
+              <div class="card rv">
+                <div class="ib">
+                  <svg class="i" aria-hidden="true"><use href="#i-heart" /></svg>
+                </div>
+                <h3>Mental Wellness</h3>
+                <p>Rhythmic breathing reduces stress and anxiety.</p>
+              </div>
+              <div class="card rv">
+                <div class="ib">
+                  <svg class="i" aria-hidden="true"><use href="#i-wave" /></svg>
+                </div>
+                <h3>Improved Stamina</h3>
+                <p>Lap by lap, your endurance rises steadily.</p>
+              </div>
+              <div class="card rv">
+                <div class="ib">
+                  <svg class="i" aria-hidden="true"><use href="#i-users" /></svg>
+                </div>
+                <h3>Better Flexibility</h3>
+                <p>Long strokes open shoulders, hips and spine.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 100%; display: flex; gap: 16px; align-items: center">
+              <div class="ib">
+                <svg class="i" aria-hidden="true"><use href="#i-heart" /></svg>
+              </div>
+              <div>
+                <h3 style="margin: 0 0 4px">Cardiovascular Health</h3>
+                <p>A strong heart and lungs with almost zero impact on joints.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Academy Achievements ===== -->
+      <section class="sec dk">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Academy Achievements</span>
+            <h2 class="st">Numbers that make us proud</h2>
+          </div>
+          <div class="stats">
+            <div class="stt rv"><b data-to="5000" data-s="+">0</b><span>Happy students</span></div>
+            <div class="stt rv d1"><b data-to="25" data-s="+">0</b><span>Expert coaches</span></div>
+            <div class="stt rv d2"><b data-to="150" data-s="+">0</b><span>Medals won</span></div>
+            <div class="stt rv d3">
+              <b data-to="12" data-s="+">0</b><span>Years of excellence</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Membership Plans ===== -->
+      <section class="sec">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Membership Plans</span>
+            <h2 class="st">Simple, transparent pricing</h2>
+            <p class="lead">Choose a plan that fits your schedule. No hidden charges.</p>
+          </div>
+          <div class="g3">
+            <div class="card pl rv d1">
+              <h3>Starter</h3>
+              <p>For first-timers</p>
+              <div class="pp">&#8377;3,500<small> / month</small></div>
+              <ul class="ck">
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>12 group sessions
+                </li>
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Skill assessment
+                </li>
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Progress report
+                </li>
+              </ul>
+              <a class="btn full ln" href="404.html">Choose Starter</a>
+            </div>
+            <div class="card pl ft3 rv d2">
+              <h3>Performance</h3>
+              <p>Most popular</p>
+              <div class="pp">&#8377;6,000<small> / month</small></div>
+              <ul class="ck">
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>20 group sessions
+                </li>
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Personal training
+                  plan
+                </li>
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Video stroke
+                  analysis
+                </li>
+              </ul>
+              <a class="btn full" href="404.html">Choose Performance</a>
+            </div>
+            <div class="card pl rv d3">
+              <h3>Elite</h3>
+              <p>For competitors</p>
+              <div class="pp">&#8377;9,500<small> / month</small></div>
+              <ul class="ck">
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Unlimited sessions
+                </li>
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Private coaching
+                  hours
+                </li>
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="#i-check" /></svg>Meet preparation
+                </li>
+              </ul>
+              <a class="btn full ln" href="404.html">Choose Elite</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Testimonials ===== -->
+      <section class="sec dk">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Testimonials</span>
+            <h2 class="st">Stories from our swimmers</h2>
+          </div>
+          <div class="sl rv">
+            <div class="trk" id="trk">
+              <div class="it">
+                <div class="av">A</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <q
+                  >I went from being afraid of deep water to swimming laps in three months. The
+                  coaches are incredibly patient.</q
+                ><b>Aditi Sharma</b><small>Beginner Swimming</small>
+              </div>
+              <div class="it">
+                <div class="av">K</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <q
+                  >My son looks forward to every class. The kids&rsquo; pool is safe, fun and
+                  beautifully maintained.</q
+                ><b>Karan Malhotra</b><small>Kids Swimming</small>
+              </div>
+              <div class="it">
+                <div class="av">M</div>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <q
+                  >Competitive coaching cut my 100 m freestyle time dramatically in just one
+                  season.</q
+                ><b>Meera Joshi</b><small>Competitive Swimming</small>
+              </div>
+            </div>
+          </div>
+          <div class="cn">
+            <button id="pv" aria-label="Previous testimonial">&#8592;</button>
+            <div class="dots" id="dots"></div>
+            <button id="nx" aria-label="Next testimonial">&#8594;</button>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Quick Answers ===== -->
+      <section class="sec">
+        <div class="w">
+          <div class="hd2 rv">
+            <span class="eb">Quick Answers</span>
+            <h2 class="st">Frequently asked questions</h2>
+          </div>
+          <div class="fqs">
+            <div class="fq rv">
+              <button type="button" aria-expanded="false">
+                <span>Do I need to know swimming before joining?</span
+                ><svg class="i pl" aria-hidden="true"><use href="#i-plus" /></svg>
+              </button>
+              <div class="fa">
+                <p>
+                  No. Our Beginner and Kids programs start from water confidence, so absolute
+                  beginners are very welcome.
+                </p>
+              </div>
+            </div>
+            <div class="fq rv">
+              <button type="button" aria-expanded="false">
+                <span>What should I bring to the first class?</span
+                ><svg class="i pl" aria-hidden="true"><use href="#i-plus" /></svg>
+              </button>
+              <div class="fa">
+                <p>
+                  A swimsuit, cap, goggles, towel and a water bottle. Caps and goggles are also
+                  available at the academy shop.
+                </p>
+              </div>
+            </div>
+            <div class="fq rv">
+              <button type="button" aria-expanded="false">
+                <span>How big are the batches?</span
+                ><svg class="i pl" aria-hidden="true"><use href="#i-plus" /></svg>
+              </button>
+              <div class="fa">
+                <p>
+                  We keep batches small, with a maximum of 8 swimmers per coach, so every student
+                  gets personal attention.
+                </p>
+              </div>
+            </div>
+            <div class="fq rv">
+              <button type="button" aria-expanded="false">
+                <span>Can I switch courses or batches later?</span
+                ><svg class="i pl" aria-hidden="true"><use href="#i-plus" /></svg>
+              </button>
+              <div class="fa">
+                <p>
+                  Yes. Your coach reviews your progress regularly and you can move to a higher level
+                  or change your batch timing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section: Call to Action ===== -->
+      <section class="cta">
+        <div class="w rv">
+          <span class="eb">Enroll today</span>
+          <h2>Ready to Make a Splash?</h2>
+          <p>Start your swimming journey with AQUAFLOW today.</p>
+          <div class="acts" style="justify-content: center">
+            <a class="btn" href="404.html">Join Our Academy</a
+            ><a class="btn out" href="404.html">Talk to Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ===== Site footer ===== -->
+    <footer class="ft">
+      <div class="w">
+        <div class="fg">
+          <div>
+            <a class="lg" href="index.html" aria-label="AQUAFLOW home"
+              ><img
+                src="assets/images/aquaflow-logo.webp"
+                alt="AQUAFLOW logo"
+                width="900"
+                height="366"
+                loading="lazy"
+            /></a>
+            <p>
+              Premium swimming coaching for every age, from the first splash to the podium finish.
+            </p>
+            <div class="so" data-so></div>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="trainers.html">Trainers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Swimming Programs</h4>
+            <ul>
+              <li><a href="404.html">Beginner Swimming</a></li>
+              <li><a href="404.html">Intermediate Swimming</a></li>
+              <li><a href="404.html">Advanced Swimming</a></li>
+              <li><a href="404.html">Kids Swimming</a></li>
+              <li><a href="404.html">Competitive Swimming</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact Information</h4>
+            <ul class="ci">
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-phone" /></svg
+                ><a >+91 98765 43210</a>
+              </li>
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-mail" /></svg
+                ><a >stackly@aquaflow.in</a>
+              </li>
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-pin" /></svg
+                ><span>12 Lake View Road, Banjara Hills, Hyderabad 500034</span>
+              </li>
+              <li>
+                <svg class="i" aria-hidden="true"><use href="#i-clock" /></svg
+                ><span>Mon-Sat 5:30 AM - 9 PM &middot; Sun 6 AM - 12 PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="fb">
+          <p>&copy; 2026 STACKLY AQUAFLOW Swimming Academy. All rights reserved.</p>
+          <p>
+            <a href="404.html">Privacy Policy</a> &middot;
+            <a href="404.html">Terms and Conditions</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      /* ===== Page scripts ===== */
+      const $ = (s, r = document) => r.querySelector(s),
+        $$ = (s, r = document) => [...r.querySelectorAll(s)];
+      const RM = matchMedia("(prefers-reduced-motion:reduce)").matches;
+      function toast(m, t) {
+        let w = $("#toasts");
+        if (!w) {
+          w = document.createElement("div");
+          w.id = "toasts";
+          w.className = "toasts";
+          w.setAttribute("role", "status");
+          document.body.appendChild(w);
+        }
+        const e = document.createElement("div");
+        e.className = "toast " + (t || "");
+        e.textContent = m;
+        w.appendChild(e);
+        requestAnimationFrame(() => e.classList.add("show"));
+        setTimeout(() => {
+          e.classList.remove("show");
+          setTimeout(() => e.remove(), 450);
+        }, 3800);
+      }
+      const SO = [
+        [
+          "Facebook",
+          "M13.5 22v-8h2.7l.5-3.2h-3.2V8.7c0-.9.4-1.7 1.8-1.7h1.5V4.2S15.5 4 14.2 4C11.6 4 10 5.6 10 8.4v2.4H7.2V14H10v8z",
+          "https://www.facebook.com/",
+        ],
+        [
+          "Instagram",
+          "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z",
+          "https://www.instagram.com/",
+        ],
+        [
+          "YouTube",
+          "M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8C22 15.2 22 12 22 12s0-3.2-.4-4.8zM10 15V9l5.2 3z",
+          "https://www.youtube.com/",
+        ],
+        [
+          "LinkedIn",
+          "M6.9 8.8H3.5V20h3.4zM5.2 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM20.5 13.6c0-3-1.6-4.9-4.1-4.9-1.4 0-2.3.7-2.7 1.4V8.8h-3.3V20h3.4v-6c0-1.5.6-2.5 1.9-2.5 1.2 0 1.800.9 1.800 2.500V20h3z",
+          "https://www.linkedin.com/",
+        ],
+      ];
+      $$("[data-so]").forEach(
+        (e) =>
+          (e.innerHTML = SO.map(
+            (s) =>
+              '<a href="404.html"  rel="noopener" aria-label="' +
+              s[0] +
+              '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="' +
+              s[1] +
+              '"/></svg></a>',
+          ).join("")),
+      );
+      (function () {
+        const b = document.body,
+          g = $("#bg");
+        if (!g) return;
+        function m(o) {
+          b.classList.toggle("mo", o);
+          g.setAttribute("aria-expanded", o);
+          g.setAttribute("aria-label", o ? "Close menu" : "Open menu");
+        }
+        g.addEventListener("click", () => m(!b.classList.contains("mo")));
+        $$("#nv a").forEach((a) => a.addEventListener("click", () => m(false)));
+        document.addEventListener("click", (e) => {
+          if (b.classList.contains("mo") && !e.target.closest("#hd")) m(false);
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") m(false);
+        });
+        addEventListener("resize", () => {
+          if (innerWidth > 980) m(false);
+        });
+      })();
+      function count(el) {
+        const to = +el.dataset.to,
+          s = el.dataset.s || "";
+        if (RM) {
+          el.textContent = to.toLocaleString("en-IN") + s;
+          return;
+        }
+        let t0;
+        const f = (t) => {
+          t0 = t0 || t;
+          const p = Math.min((t - t0) / 1600, 1);
+          el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString("en-IN") + s;
+          if (p < 1) requestAnimationFrame(f);
+        };
+        requestAnimationFrame(f);
+      }
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            e.target.classList.add("in");
+            $$("[data-to]", e.target).forEach(count);
+            if (e.target.dataset.to) count(e.target);
+            io.unobserve(e.target);
+          }),
+        { threshold: 0.05 },
+      );
+      $$(".rv,[data-to]").forEach((e) => io.observe(e));
+      const safe = () =>
+        $$(".rv:not(.in)").forEach((e) => {
+          if (e.getBoundingClientRect().top < innerHeight + 40) {
+            e.classList.add("in");
+            $$("[data-to]", e).forEach(count);
+          }
+        });
+      setTimeout(safe, 1200);
+      addEventListener(
+        "scroll",
+        () => {
+          clearTimeout(window._st);
+          window._st = setTimeout(safe, 250);
+        },
+        { passive: true },
+      );
+      $$(".fq button").forEach((b) =>
+        b.addEventListener("click", () => {
+          const q = b.parentElement,
+            o = !q.classList.contains("op");
+          $$(".fq.op").forEach((x) => {
+            x.classList.remove("op");
+            x.querySelector(".fa").style.maxHeight = 0;
+            x.querySelector("button").setAttribute("aria-expanded", "false");
+          });
+          if (o) {
+            q.classList.add("op");
+            const a = q.querySelector(".fa");
+            a.style.maxHeight = a.scrollHeight + "px";
+            b.setAttribute("aria-expanded", "true");
+          }
+        }),
+      );
+      (function () {
+        const sp = document.createElement("div");
+        sp.className = "spb";
+        document.body.prepend(sp);
+        const bt = document.createElement("button");
+        bt.className = "btt";
+        bt.type = "button";
+        bt.setAttribute("aria-label", "Back to top");
+        bt.innerHTML = '<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>';
+        document.body.appendChild(bt);
+        bt.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+        const h = $("#hd");
+        const f = () => {
+          const y = scrollY,
+            m = document.documentElement.scrollHeight - innerHeight;
+          sp.style.width = (m > 0 ? (y / m) * 100 : 0) + "%";
+          bt.classList.toggle("on", y > 500);
+          if (h) h.classList.toggle("sc", y > 40);
+        };
+        addEventListener("scroll", f, { passive: true });
+        f();
+        if (matchMedia("(hover:hover)").matches && !RM)
+          $$(".card,.tc,.fc").forEach((c) => {
+            c.addEventListener("mousemove", (e) => {
+              const r = c.getBoundingClientRect(),
+                x = (e.clientX - r.left) / r.width,
+                y = (e.clientY - r.top) / r.height;
+              c.style.setProperty("--mx", x * 100 + "%");
+              c.style.setProperty("--my", y * 100 + "%");
+              c.style.setProperty("--ry", ((x - 0.5) * 7).toFixed(2) + "deg");
+              c.style.setProperty("--rx", ((0.5 - y) * 7).toFixed(2) + "deg");
+            });
+            c.addEventListener("mouseleave", () => {
+              c.style.setProperty("--rx", "0deg");
+              c.style.setProperty("--ry", "0deg");
+            });
+          });
+      })();
+      (function () {
+        const t = $("#trk");
+        if (!t) return;
+        const n = t.children.length,
+          d = $("#dots");
+        let i = 0,
+          tm;
+        for (let k = 0; k < n; k++) {
+          const e = document.createElement("i");
+          e.addEventListener("click", () => go(k));
+          d.appendChild(e);
+        }
+        function go(k) {
+          i = (k + n) % n;
+          t.style.transform = "translateX(-" + i * 100 + "%)";
+          [...d.children].forEach((e, j) => e.classList.toggle("on", j === i));
+          clearInterval(tm);
+          if (!RM) tm = setInterval(() => go(i + 1), 6000);
+        }
+        $("#pv").addEventListener("click", () => go(i - 1));
+        $("#nx").addEventListener("click", () => go(i + 1));
+        go(0);
+      })();
+    </script>
+  </body>
+</html>
