@@ -420,9 +420,11 @@
         padding: 160px 0 90px;
         color: #fff;
         overflow: hidden;
-        background:
-          var(--bg) center/cover,
-          var(--abyss);
+        background-color: var(--abyss);
+        background-image: var(--bg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
       .pg:before {
         content: "";
@@ -2250,7 +2252,7 @@
     </header>
     <main>
       <!-- ===== Section: Our Coaching Team ===== -->
-      <section class="pg" style="--bg: url(assets/images/bn-trainers.webp)">
+      <section class="pg" style="--bg: url('./assets/images/trainers-page-1.webp'), url(assets/images/bn-trainers.webp)">
         <div class="w">
           <nav class="cr" aria-label="Breadcrumb">
             <a href="index.html">Home</a><span>/</span><b>Trainers</b>
@@ -2278,10 +2280,10 @@
           </div>
           <div class="im rv" style="min-height: 320px">
             <img
-              src="assets/images/ill-coaching.webp"
-              alt="Coach with a training clipboard"
-              width="1620"
-              height="1080"
+              src="./assets/images/trainers-page-2.webp" onerror="this.onerror=null;this.src='assets/images/ill-coaching.webp'"
+              alt="Coach training swimmers at the poolside"
+              width="1400"
+              height="933"
               loading="lazy"
             />
             <div class="tag">Coaches on deck, always</div>
@@ -2298,7 +2300,7 @@
           <div class="g4">
             <article class="tc rv">
               <img
-                src="assets/images/tr-david-kumar.webp"
+                src="./assets/images/team-1.webp" onerror="this.onerror=null;this.src='assets/images/tr-david-kumar.webp'"
                 alt="David Kumar, Head Coach"
                 loading="lazy"
                 width="330"
@@ -2317,7 +2319,7 @@
             </article>
             <article class="tc rv">
               <img
-                src="assets/images/tr-priya-sharma.webp"
+                src="./assets/images/team-2.webp" onerror="this.onerror=null;this.src='assets/images/tr-priya-sharma.webp'"
                 alt="Priya Sharma, Swimming Coach"
                 loading="lazy"
                 width="330"
@@ -2337,7 +2339,7 @@
             </article>
             <article class="tc rv">
               <img
-                src="assets/images/tr-rahul-verma.webp"
+                src="./assets/images/team-3.webp" onerror="this.onerror=null;this.src='assets/images/tr-rahul-verma.webp'"
                 alt="Rahul Verma, Fitness Trainer"
                 loading="lazy"
                 width="330"
@@ -2357,7 +2359,7 @@
             </article>
             <article class="tc rv">
               <img
-                src="assets/images/tr-sneha-reddy.webp"
+                src="./assets/images/team-4.webp" onerror="this.onerror=null;this.src='assets/images/tr-sneha-reddy.webp'"
                 alt="Sneha Reddy, Kids Coach"
                 loading="lazy"
                 width="330"

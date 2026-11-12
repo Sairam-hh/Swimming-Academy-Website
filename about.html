@@ -423,9 +423,11 @@
         padding: 160px 0 90px;
         color: #fff;
         overflow: hidden;
-        background:
-          var(--bg) center/cover,
-          var(--abyss);
+        background-color: var(--abyss);
+        background-image: var(--bg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
       .pg:before {
         content: "";
@@ -2196,7 +2198,7 @@
     </header>
     <main>
       <!-- ===== Section: Our Academy Story ===== -->
-      <section class="pg" style="--bg: url(assets/images/bn-about.webp)">
+      <section class="pg" style="--bg: url('./assets/images/about-page-1.webp'), url(assets/images/bn-about.webp)">
         <div class="w">
           <nav class="cr" aria-label="Breadcrumb">
             <a href="index.html">Home</a><span>/</span><b>About</b>
@@ -2210,10 +2212,10 @@
         <div class="w sp">
           <div class="im rv">
             <img
-              src="assets/images/ill-story.webp"
+              src="./assets/images/about-page-2.webp" onerror="this.onerror=null;this.src='assets/images/ill-story.webp'"
               alt="Swimmers training together in the academy pool"
-              width="1620"
-              height="1080"
+              width="1400"
+              height="933"
               loading="lazy"
             />
             <div class="tag">Founded on a love of water</div>
@@ -2413,10 +2415,10 @@
         <div class="w sp r">
           <div class="im rv">
             <img
-              src="assets/images/ill-safety.webp"
-              alt="Lifebuoy and safety shield"
-              width="1620"
-              height="1080"
+              src="./assets/images/about-page-3.webp" onerror="this.onerror=null;this.src='assets/images/ill-safety.webp'"
+              alt="Pool safety at the academy"
+              width="1400"
+              height="933"
               loading="lazy"
             />
             <div class="tag">Safety is never optional</div>

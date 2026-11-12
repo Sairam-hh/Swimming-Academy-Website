@@ -423,9 +423,11 @@
         padding: 160px 0 90px;
         color: #fff;
         overflow: hidden;
-        background:
-          var(--bg) center/cover,
-          var(--abyss);
+        background-color: var(--abyss);
+        background-image: var(--bg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
       .pg:before {
         content: "";
@@ -2196,7 +2198,7 @@
     </header>
     <main>
       <!-- ===== Section: Swimming Programs ===== -->
-      <section class="pg" style="--bg: url(assets/images/bn-courses.webp)">
+      <section class="pg" style="--bg: url('./assets/images/courses-page-1.webp'), url(assets/images/bn-courses.webp)">
         <div class="w">
           <nav class="cr" aria-label="Breadcrumb">
             <a href="index.html">Home</a><span>/</span><b>Courses</b>
@@ -2233,10 +2235,10 @@
           </div>
           <div class="im rv" style="min-height: 340px">
             <img
-              src="assets/images/ill-lanes.webp"
-              alt="Academy pool lanes with a swimmer"
-              width="1620"
-              height="1080"
+              src="./assets/images/courses-page-2.webp" onerror="this.onerror=null;this.src='assets/images/ill-lanes.webp'"
+              alt="Academy swimming pool"
+              width="1400"
+              height="933"
               loading="lazy"
             />
             <div class="tag">8-lane heated pool</div>
@@ -2263,7 +2265,7 @@
             <article class="card cc rv" data-k="beginner">
               <div class="ph">
                 <img
-                  src="assets/images/crs-beginner.webp"
+                  src="./assets/images/home-page-3.webp" onerror="this.onerror=null;this.src='assets/images/crs-beginner.webp'"
                   alt="Beginner Swimming"
                   loading="lazy"
                   width="400"
@@ -2291,7 +2293,7 @@
             <article class="card cc rv" data-k="intermediate">
               <div class="ph">
                 <img
-                  src="assets/images/crs-intermediate.webp"
+                  src="./assets/images/home-page-4.webp" onerror="this.onerror=null;this.src='assets/images/crs-intermediate.webp'"
                   alt="Intermediate Swimming"
                   loading="lazy"
                   width="400"
@@ -2319,7 +2321,7 @@
             <article class="card cc rv" data-k="advanced">
               <div class="ph">
                 <img
-                  src="assets/images/crs-advanced.webp"
+                  src="./assets/images/home-page-5.webp" onerror="this.onerror=null;this.src='assets/images/crs-advanced.webp'"
                   alt="Advanced Swimming"
                   loading="lazy"
                   width="400"
@@ -2347,7 +2349,7 @@
             <article class="card cc rv" data-k="kids">
               <div class="ph">
                 <img
-                  src="assets/images/crs-kids.webp"
+                  src="./assets/images/home-page-6.webp" onerror="this.onerror=null;this.src='assets/images/crs-kids.webp'"
                   alt="Kids Swimming"
                   loading="lazy"
                   width="400"
@@ -2375,7 +2377,7 @@
             <article class="card cc rv" data-k="competitive">
               <div class="ph">
                 <img
-                  src="assets/images/crs-competitive.webp"
+                  src="./assets/images/home-page-7.webp" onerror="this.onerror=null;this.src='assets/images/crs-competitive.webp'"
                   alt="Competitive Swimming"
                   loading="lazy"
                   width="400"
@@ -2403,7 +2405,7 @@
             <article class="card cc rv" data-k="private">
               <div class="ph">
                 <img
-                  src="assets/images/crs-private.webp"
+                  src="./assets/images/home-page-8.webp" onerror="this.onerror=null;this.src='assets/images/crs-private.webp'"
                   alt="Private Swimming Lessons"
                   loading="lazy"
                   width="400"

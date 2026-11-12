@@ -347,7 +347,7 @@ img { max-width: 100%; display: block; }
 }
 body { background: #fff; }
 .au { display: grid; grid-template-columns: 1fr 1fr; height: 100vh; height: 100dvh; }
-.al { position: relative; overflow: hidden; color: #fff; display: flex; flex-direction: column; justify-content: space-between; padding: 44px; background: var(--bgi) center/cover, var(--abyss); }
+.al { position: relative; overflow: hidden; color: #fff; display: flex; flex-direction: column; justify-content: space-between; padding: 44px; background-color: var(--abyss); background-image: var(--bgi); background-size: cover; background-position: center; background-repeat: no-repeat; }
 .al:before { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(1, 42, 74, 0.95), rgba(1, 73, 124, 0.75) 60%, rgba(0, 150, 199, 0.5)); }
 .al > * { position: relative; }
 .al .lg img { height: 54px; }
@@ -458,7 +458,7 @@ body { background: #fff; }
     </svg>
 
     <main class="au">
-      <aside class="al" style="--bgi: url(assets/images/ill-signup.webp)">
+      <aside class="al" style="--bgi: url('./assets/images/home-page-4.webp'), url(assets/images/ill-signup.webp)">
         <a class="lg" href="index.html" aria-label="AQUAFLOW home"
           ><img src="assets/images/aquaflow-logo.webp" alt="AQUAFLOW logo" width="900" height="366"
         /></a>
